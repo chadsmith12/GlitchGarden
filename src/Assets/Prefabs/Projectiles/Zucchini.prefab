@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 3
-  _rotationSpeed: 0
+  _rotationSpeed: -180
 --- !u!212 &212097940977105064
 SpriteRenderer:
   m_ObjectHideFlags: 1
