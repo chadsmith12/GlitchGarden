@@ -6,9 +6,7 @@ namespace Assets.Scripts.Attacker
 {
     public class Attacker : MonoBehaviour
     {
-        [Range(0f, 5f)]
-        [SerializeField]
-        private float _walkSpeed = 1f;
+        private float _currentSpeed = 1f;
 
         // Use this for initialization
         void Start()
@@ -19,8 +17,17 @@ namespace Assets.Scripts.Attacker
         // Update is called once per frame
         void Update()
         {
-            var movementSpeed = Vector2.left * _walkSpeed * Time.deltaTime;
+            var movementSpeed = Vector2.left * _currentSpeed * Time.deltaTime;
             transform.Translate(movementSpeed);
+        }
+
+        /// <summary>
+        /// Function is called from Unity Animation event.
+        /// Sets the current speed to the speed passed in from the event.
+        /// </summary>
+        public void SetMovementSpeed(float speed)
+        {
+           _currentSpeed = speed;
         }
     }
 }
