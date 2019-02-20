@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.Attacker
 {
+    [RequireComponent(typeof(AttackerHealth))]
     public class Attacker : MonoBehaviour
     {
         private float _currentSpeed = 1f;
