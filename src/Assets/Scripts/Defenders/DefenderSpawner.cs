@@ -8,12 +8,20 @@ namespace Assets.Scripts.Defefenders
 
         private void OnMouseDown()
         {
-            SpawnDefender();
+            SpawnDefender(GetSquarePosition());
         }
 
-        private void SpawnDefender()
+        private Vector2 GetSquarePosition()
         {
-            var defender = Instantiate(_defender, transform.position, Quaternion.identity);
+            var clickedPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            var worldPosition = Camera.main.ScreenToWorldPoint(clickedPosition);
+
+            return worldPosition;
+        }
+
+        private void SpawnDefender(Vector2 spawnPosition)
+        {
+            var defender = Instantiate(_defender, spawnPosition, Quaternion.identity);
         }
     }
 }
