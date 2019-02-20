@@ -19,7 +19,6 @@ namespace Assets.Scripts.Projectiles
         void Update()
         {
             var movement = Vector2.right * _moveSpeed * Time.deltaTime;
-            var newRotation = Vector3.forward * _rotationSpeed * Time.deltaTime;
             transform.Translate(movement, Space.World);
             transform.Rotate(Vector3.forward, _rotationSpeed * Time.deltaTime);
         }

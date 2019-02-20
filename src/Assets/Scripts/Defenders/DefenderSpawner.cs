@@ -8,7 +8,8 @@ namespace Assets.Scripts.Defefenders
 
         private void OnMouseDown()
         {
-            SpawnDefender(GetSquarePosition());
+            var gridPosition = SnapToGrid(GetSquarePosition());
+            SpawnDefender(gridPosition);
         }
 
         private Vector2 GetSquarePosition()
@@ -19,9 +20,14 @@ namespace Assets.Scripts.Defefenders
             return worldPosition;
         }
 
+        private Vector2 SnapToGrid(Vector2 rawPosition)
+        {
+            return new Vector2(Mathf.RoundToInt(rawPosition.x), Mathf.RoundToInt(rawPosition.y));
+        }
+
         private void SpawnDefender(Vector2 spawnPosition)
         {
-            var defender = Instantiate(_defender, spawnPosition, Quaternion.identity);
+            Instantiate(_defender, spawnPosition, Quaternion.identity);
         }
     }
 }
