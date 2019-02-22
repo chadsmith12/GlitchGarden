@@ -4,12 +4,21 @@ namespace Assets.Scripts.Defefenders
 {
     public class DefenderSpawner : MonoBehaviour
     {
-        [SerializeField] private GameObject _defender;
+        private Defender _defender;
 
         private void OnMouseDown()
         {
             var gridPosition = SnapToGrid(GetSquarePosition());
             SpawnDefender(gridPosition);
+        }
+
+        /// <summary>
+        /// Sets the defender to spawn to the defender that was selected.
+        /// </summary>
+        /// <param name="defenderToSelect">The defender that was selected that should be spawned.</param>
+        public void SetSelectedDefender(Defender defenderToSelect)
+        {
+            _defender = defenderToSelect;
         }
 
         private Vector2 GetSquarePosition()

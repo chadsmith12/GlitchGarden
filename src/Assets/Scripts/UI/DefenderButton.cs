@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Assets.Scripts.Defefenders;
 
 namespace Assets.Scripts.UI
 {
@@ -8,6 +9,8 @@ namespace Assets.Scripts.UI
         private readonly Color32 _unSelectedColor = new Color32(19, 19, 19, 255);
 
         private DefenderButton[] _defenderButtons;
+        private DefenderSpawner _defenderSpawner;
+        [SerializeField] private Defender _defenderPrefab;
 
         /// <summary>
         /// Gets the current sprite renderer for this button.
@@ -18,6 +21,7 @@ namespace Assets.Scripts.UI
         {
             SpriteRenderer = GetComponent<SpriteRenderer>();
             _defenderButtons = FindObjectsOfType<DefenderButton>();
+            _defenderSpawner = FindObjectOfType<DefenderSpawner>();
         }
 
         private void OnMouseDown()
@@ -30,6 +34,7 @@ namespace Assets.Scripts.UI
 
             // clicked on the defender we are going to have selected to spawn, change the color to white to show it is selected.
             SpriteRenderer.color = _selectedColor;
+            _defenderSpawner.SetSelectedDefender(_defenderPrefab);
         }
     }
 }
