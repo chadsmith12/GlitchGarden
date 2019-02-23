@@ -35,8 +35,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4585776577349080}
   - component: {fileID: 212001490899400430}
-  - component: {fileID: 95828169017781196}
-  - component: {fileID: 114780099301921736}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -53,6 +51,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4524862993614640}
   - component: {fileID: 114816640107187442}
+  - component: {fileID: 114892105532599768}
+  - component: {fileID: 95244929839534626}
   m_Layer: 0
   m_Name: Cactus
   m_TagString: Untagged
@@ -101,13 +101,13 @@ Transform:
   m_Father: {fileID: 4585776577349080}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95828169017781196
+--- !u!95 &95244929839534626
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1341238190505470}
+  m_GameObject: {fileID: 1617478731403290}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e4bb151354e2d494193b503d62dfb3be, type: 2}
@@ -119,20 +119,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114780099301921736
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1341238190505470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77d47c603bd796c4090203002fbb1096, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _projectile: {fileID: 114255456605112388, guid: 5c028daf763a63542a2cad8d6322421b,
-    type: 2}
-  _gun: {fileID: 1256074171521826}
 --- !u!114 &114816640107187442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,6 +131,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _starCost: 100
+--- !u!114 &114892105532599768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1617478731403290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d47c603bd796c4090203002fbb1096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectile: {fileID: 114255456605112388, guid: 5c028daf763a63542a2cad8d6322421b,
+    type: 2}
+  _gun: {fileID: 1256074171521826}
 --- !u!212 &212001490899400430
 SpriteRenderer:
   m_ObjectHideFlags: 1
