@@ -38,7 +38,8 @@ namespace Assets.Scripts.Attacker
 
         private void SpawnAttacker()
         {
-            Instantiate(_attackerPrefab, transform.position, transform.rotation);
+            var newAttacker = Instantiate(_attackerPrefab, transform.position, transform.rotation);
+            newAttacker.transform.parent = transform;
         }
     }
 }

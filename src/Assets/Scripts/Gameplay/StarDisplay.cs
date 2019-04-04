@@ -38,6 +38,16 @@ namespace Assets.Scripts.Gameplay
             }
         }
 
+        /// <summary>
+        /// Check to see if we have enough stars.
+        /// </summary>
+        /// <param name="amount">Amount of stars we need to have.</param>
+        /// <returns>True if we have enough stars, otherwise; false.</returns>
+        public bool HasEnoughStars(int amount)
+        {
+            return _stars >= amount;
+        }
+
         private void UpdateResourceDisplay()
         {
             _resourceText.text = _stars.ToString();

@@ -1,15 +1,22 @@
 ﻿using UnityEngine;
+using Assets.Scripts.Gameplay;
 
 namespace Assets.Scripts.Defefenders
 {
     public class DefenderSpawner : MonoBehaviour
     {
         private Defender _defender;
+        private StarDisplay _starDisplay;
+
+        private void Start()
+        {
+            _starDisplay = FindObjectOfType<StarDisplay>();
+        }
 
         private void OnMouseDown()
         {
             var gridPosition = SnapToGrid(GetSquarePosition());
-            SpawnDefender(gridPosition);
+            AttemptToPlaceDefender(gridPosition);
         }
 
         /// <summary>
@@ -37,6 +44,17 @@ namespace Assets.Scripts.Defefenders
         private void SpawnDefender(Vector2 spawnPosition)
         {
             Instantiate(_defender, spawnPosition, Quaternion.identity);
+        }
+
+        private void AttemptToPlaceDefender(Vector2 gridPos)
+        {
+            var defenderCost = _defender.StarCost;
+
+            if(_starDisplay.HasEnoughStars(defenderCost))
+            {
+                SpawnDefender(gridPos);
+                _starDisplay.SpendStars(defenderCost);
+            }
         }
     }
 }

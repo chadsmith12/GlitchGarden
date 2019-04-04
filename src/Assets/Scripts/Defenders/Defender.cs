@@ -8,6 +8,17 @@ namespace Assets.Scripts.Defefenders
         private StarDisplay _starDisplay;
         [SerializeField] private int _starCost = 100;
 
+        /// <summary>
+        /// Gets how many stars it costs to get this defender.
+        /// </summary>
+        public int StarCost
+        {
+            get
+            {
+                return _starCost;
+            }
+        }
+
         private void Start()
         {
             _starDisplay = FindObjectOfType<StarDisplay>();
