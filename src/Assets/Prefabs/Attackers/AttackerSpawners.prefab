@@ -23,7 +23,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner(1)
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -54,7 +54,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner (4)
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -70,7 +70,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner (5)
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -86,7 +86,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -102,7 +102,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _minSpawnDelay: 1
-  _maxSpawnDelay: 5
+  _maxSpawnDelay: 7
   _attackerPrefab: {fileID: 114760203168098968, guid: fc285effaa152f442bb9c8bca4feea78,
     type: 2}
 --- !u!114 &114545684678737162
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _minSpawnDelay: 1
-  _maxSpawnDelay: 5
+  _maxSpawnDelay: 7
   _attackerPrefab: {fileID: 114760203168098968, guid: fc285effaa152f442bb9c8bca4feea78,
     type: 2}
 --- !u!114 &114624484355728222
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _minSpawnDelay: 1
-  _maxSpawnDelay: 5
+  _maxSpawnDelay: 7
   _attackerPrefab: {fileID: 114760203168098968, guid: fc285effaa152f442bb9c8bca4feea78,
     type: 2}
 --- !u!114 &114715376365619490
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _minSpawnDelay: 1
-  _maxSpawnDelay: 5
+  _maxSpawnDelay: 7
   _attackerPrefab: {fileID: 114760203168098968, guid: fc285effaa152f442bb9c8bca4feea78,
     type: 2}
 --- !u!114 &114799509871033692
@@ -261,6 +261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _minSpawnDelay: 1
-  _maxSpawnDelay: 5
+  _maxSpawnDelay: 7
   _attackerPrefab: {fileID: 114760203168098968, guid: fc285effaa152f442bb9c8bca4feea78,
     type: 2}
