@@ -49,10 +49,7 @@ namespace Assets.Scripts.Attacker
         private bool IsSpawnerCloseEnough(AttackerSpawner spawner)
         {
             var currentDiff = Mathf.Abs(spawner.transform.position.y - transform.position.y);
-            Debug.Log("Current Dif: " + currentDiff);
-            Debug.Log("Epislon Value: " + Mathf.Epsilon);
             var difference = Mathf.Abs(currentDiff) <= Mathf.Epsilon;
-            Debug.Log("Is Close Enough: " + difference);
 
             return difference;
         }
