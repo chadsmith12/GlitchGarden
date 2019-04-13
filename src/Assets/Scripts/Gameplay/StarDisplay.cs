@@ -5,7 +5,7 @@ namespace Assets.Scripts.Gameplay
 {
     public class StarDisplay : MonoBehaviour
     {
-        [SerializeField] private int _stars = 100;
+        [SerializeField] private int _stars = 1000;
         private Text _resourceText;
 
         // Use this for initialization
