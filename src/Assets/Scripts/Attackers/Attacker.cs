@@ -6,6 +6,7 @@ namespace Assets.Scripts.Attacker
     public class Attacker : MonoBehaviour
     {
         private float _currentSpeed = 1f;
+        private GameObject _currentTarget;
 
         // Use this for initialization
         void Start()
@@ -27,6 +28,13 @@ namespace Assets.Scripts.Attacker
         public void SetMovementSpeed(float speed)
         {
            _currentSpeed = speed;
+        }
+
+        public void Attack(GameObject target)
+        {
+            _currentTarget = target;
+            var animator = GetComponent<Animator>();
+            animator.SetBool("IsAttacking", true);
         }
     }
 }

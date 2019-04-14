@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 60090582250630938}
   - component: {fileID: 114400439931571936}
   - component: {fileID: 50423223028922714}
+  - component: {fileID: 114272462068846410}
   m_Layer: 0
   m_Name: Lizard
   m_TagString: Untagged
@@ -103,7 +104,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -155,6 +156,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114272462068846410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1274598076864754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b3464a4a8ec794d8d3380dc02de3d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114400439931571936
 MonoBehaviour:
   m_ObjectHideFlags: 1
